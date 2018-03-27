@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <img src="{{ url_for('static', filename = 'uploads/' + profile.image) }}" />
+    <h3>{{ profile.firstName }} {{ profile.lastName }}</h3>
+    {{ profile.email }}
+    {{ profile.location }}
+    {{ "Joined on" }} {{ profile.created_on }}
+    <h4>{{ "About Me" }}</h4>
+    {{ profile.biography }}<br>
+    <button type="button" class="btn btn-primary">Send Message</button>
+    <button type="button" class="btn btn-primary">Follow</button>
+
+{% endblock %}

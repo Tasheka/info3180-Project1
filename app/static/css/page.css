@@ -1,0 +1,62 @@
+body {
+    padding-top: 5rem;
+    background-color:PowderBlue ;
+}
+
+.form-container{
+    padding-left: 10px;
+    background-color: white;
+    border-top-style: solid;
+    border-top-color: blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.line-up{
+    margin: 0 auto;
+    padding: 5px;
+    width: 45%;
+}
+
+h2{
+    text-align:center;
+    color:red;
+}
+
+hr{
+    border-width: 3px;
+    background-color: DodgerBlue ; 
+}
+
+.Go
+{
+    background-color: #66cc00;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.enterField{
+    border-radius:7px;
+    border:1px solid grey;
+    width:400px;
+    height:45px;
+}
+
+#required{
+    color:red;
+}
+
+.enterFieldBio{
+    border-radius:7px;
+    border:1px solid grey;
+    width:400px;
+    height:150px;
+}
