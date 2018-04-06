@@ -3,7 +3,7 @@ from . import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    firsName = db.Column(db.String(80))
+    firstName = db.Column(db.String(80))
     lastName = db.Column(db.String(80))
     gender = db.Column(db.String(10))
     email = db.Column(db.String(120), unique=True)

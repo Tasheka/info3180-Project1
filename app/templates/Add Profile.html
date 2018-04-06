@@ -9,41 +9,41 @@
     <div class="line-up">
     <div id = "Title"><h1>Add Profile</h1></div>
   
-    <form method = 'POST' action= "{{url_for('add_profile')}}" >
+    <form method = 'POST' action= "{{url_for('add_profile')}}" enctype="multipart/form-data" >
         {{ form.csrf_token }}
     <div class="form-container border-style">
-        <b><div id = "fieldName">{{ form.firstName.label}}</div><div id = "required"> (Required)</div></b>
+        <b><div id = "fieldName">{{ form.firstName.label}}</div><div id = "required"> *</div></b>
         <div>{{form.firstName (class = "enterField") }}</div>
         
         <br>
         
-        <b><div id = "fieldName">{{ form.lastName.label }}</div><div id = "required"> (Required)</div></b> 
+        <b><div id = "fieldName">{{ form.lastName.label }}</div><div id = "required">*</div></b> 
         <div>{{form.lastName (class = "enterField") }}</div>
         
         <br>
         
-        <b><div id = "fieldName">{{ form.gender.label }}</div><div id = "required"> (Required)</div></b> 
+        <b><div id = "fieldName">{{ form.gender.label }}</div><div id = "required"> *</div></b> 
         <div>{{form.gender (class = "enterField",placeholder="Select Gender" )}}</div>
         
         <br>
         
-        <b><div id = "fieldName">{{ form.email.label }}</div><div id = "required"> (Required)</div></b> 
+        <b><div id = "fieldName">{{ form.email.label }}</div><div id = "required">*</div></b> 
         <div>{{form.email (class = "enterField", placeholder="jdoe@example.com") }}</div>
         
         <br>
         
-        <b><div id = "fieldName">{{ form.location.label }}</div><div id = "required"> (Required)</div></b> 
+        <b><div id = "fieldName">{{ form.location.label }}</div><div id = "required">*</div></b> 
         <div>{{form.location (class = "enterField",placeholder="e.g. Kingston, Jamaica")}}</div>
         
         <br>
         
-        <b><div id = "fieldName">{{ form.biography.label }}</div><div id = "required"> (Required)</div></b> 
+        <b><div id = "fieldName">{{ form.biography.label }}</div><div id = "required">*</div></b> 
         <div>{{form.biography (class="enterFieldBio") }}</div>
         
         <br>
         
-        {{ form.profilePhoto.label}}
-        {{ form.profilePhoto }}
+        <b><div id = "fieldName"> {{ form.profilePhoto.label}} </div><div id = "required"> *</div></b>
+        <div>{{ form.profilePhoto }} </div>
         
         <button type = "Submit" class="Go" >Add Profile</button>
     </form>

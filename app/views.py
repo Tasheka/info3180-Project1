@@ -35,7 +35,7 @@ def add_profile():
                 
                 db.session.add(user)
                 db.session.commit()
-                
+        
                 photo.save(os.path.join(app.config['UPLOAD_FOLDER'],photo_name))
                 
                 flash("Profile Added", "success")
@@ -44,7 +44,7 @@ def add_profile():
             except Exception as e:
                 db.session.rollback()
                 flash("Internal Error", "danger")
-                return render_template("create_new_profile.html", form = form)
+                return render_template("Add Profile.html", form = form)
         
         errors = form_errors(form)
         flash(''.join(error+" " for error in errors), "danger")
@@ -57,7 +57,7 @@ def view_profiles():
     profiles = []
     
     for user in users:
-        profiles.append({"pro_pic": user.photo, "f_name":user.firstname, "l_name": user.lastname, "gender": user.gender, "location":user.location, "id":user.id})
+        profiles.append({"pro_pic": user.photo, "f_name":user.firstName, "l_name": user.lastName, "gender": user.gender, "email": user.email,  "location":user.location, "biography": user.biography, "photo": user.photo, "created": user.created})
     
     return render_template("view_profiles.html", profile = profiles)
 

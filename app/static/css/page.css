@@ -52,6 +52,8 @@ hr{
 
 #required{
     color:red;
+    display:inline-block;
+    
 }
 
 .enterFieldBio{
@@ -59,4 +61,9 @@ hr{
     border:1px solid grey;
     width:400px;
     height:150px;
+}
+
+#fieldName{
+    display:inline-block;
+   
 }
